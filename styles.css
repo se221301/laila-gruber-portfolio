@@ -388,6 +388,12 @@ h1, h2, h3, p, figure { margin-top: 0; }
   padding: 0 0 64px;
   border-bottom: 1px solid var(--line);
 }
+.project-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
 .back-link {
   display: inline-block;
   padding: 11px 0 37px;
