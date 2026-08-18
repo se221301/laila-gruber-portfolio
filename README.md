@@ -1,31 +1,27 @@
 # Laila Gruber Portfolio
 
-Static portfolio website inspired by the Base44 draft. No framework or build step is required.
+Static portfolio website for GitHub Pages / Cloudflare Pages.
 
-## Preview locally
-Open `index.html` in a browser, or use the VS Code extension **Live Server**.
+## Files
 
-## Replace images
-Put your own images into the `assets` folder and either keep the existing filenames or change the `src` path in the HTML.
+- `index.html` — home page
+- `project-01.html` — research project page
+- `styles.css` — styling
+- `script.js` — small UI helpers
+- `assets/` — all portfolio images
 
-Recommended filenames:
-- `portrait-placeholder.svg` → portrait
-- `project-01-process-placeholder.svg` → furnace/process overview
-- `project-01-model-categories-placeholder.svg` → model categories
-- `project-01-workflow-placeholder.svg` → comparison workflow
-- `project-01-prioritized-placeholder.svg` → final prioritized models
+## Assets
 
-PNG or JPG files are fine. Example:
+- `portrait.png` — professional portrait with unbranded navy shirt
+- `figure-01-pusher-furnace-process.png` — pusher furnace process overview
+- `figure-02-model-groups.png` — model groups in anomaly detection
+- `figure-03-model-comparison-workflow.png` — comparison workflow
+- `figure-04-prioritized-models.png` — prioritized models
 
-```html
-<img src="assets/portrait.jpg" alt="Portrait of Laila Gruber">
-```
-
-## Push an update to GitHub
-After replacing the files in your local repository:
+## Publish updates
 
 ```bash
 git add .
-git commit -m "Match Base44 portfolio design"
+git commit -m "Update portfolio images"
 git push
 ```
