@@ -388,16 +388,11 @@ h1, h2, h3, p, figure { margin-top: 0; }
   padding: 0 0 64px;
   border-bottom: 1px solid var(--line);
 }
-.project-figure .placeholder-frame {
-  aspect-ratio: auto;
-  overflow: visible;
-}
-
-.project-figure .placeholder-frame img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
+.project-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 .back-link {
   display: inline-block;
@@ -450,7 +445,7 @@ h1, h2, h3, p, figure { margin-top: 0; }
 }
 .project-body { padding: 72px 0 0; }
 .project-figure { margin: 0 0 72px; }
-.wide-frame { aspect-ratio: auto; }
+.wide-frame { aspect-ratio: 2.25 / 1; }
 .figure-caption {
   margin-top: 10px;
   color: var(--muted);
@@ -666,5 +661,32 @@ h1, h2, h3, p, figure { margin-top: 0; }
   .comparison-block h2,
   .results-block h2,
   .tech-block h2 { font-size: 30px; }
-  .wide-frame { aspect-ratio: auto; }
+  .wide-frame { aspect-ratio: 1.35 / 1; }
+}
+
+
+/* ===== Definitive project figure image sizing ===== */
+.project-figure .project-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+}
+
+.project-figure .project-image img {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* The old wide-frame rules are not used for project figures anymore. */
+.project-figure .wide-frame {
+  aspect-ratio: auto !important;
+  height: auto !important;
 }
