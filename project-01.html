@@ -9,140 +9,145 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">LG<span>.</span></a>
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">LAILA GRUBER</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main class="project-page">
-    <section class="section project-hero">
-      <div class="eyebrow">PROJECT 01 · RESEARCH PROJECT · INDUSTRY 4.0 · MACHINE LEARNING</div>
-      <h1>Machine Learning Based Anomaly Detection in Industrial Pusher Furnaces</h1>
-      <p class="project-lead">Research on suitable machine learning methods for detecting anomalies in multivariate industrial time-series data from an industrial pusher furnace.</p>
-      <div class="meta-grid">
-        <div><span>Project ID</span><strong>01</strong></div>
-        <div><span>Date</span><strong>2026</strong></div>
-        <div><span>Focus</span><strong>ML Model Evaluation</strong></div>
-        <div><span>Status</span><strong>Completed</strong></div>
-      </div>
-    </section>
-
-    <section class="section figure-block">
-      <img class="project-image" src="assets/project-01-process-placeholder.svg" alt="Industrial pusher furnace process overview placeholder" />
-      <div class="figure-caption"><span>FIG. 1</span><p>Process overview: temperature, gas and air control systems across furnace zones.</p></div>
-    </section>
-
-    <section class="section text-grid">
-      <div><div class="eyebrow">01 · CONTEXT</div><h2>Context</h2></div>
-      <div class="project-prose"><p>Industrial pusher furnaces generate large amounts of process data from temperature, gas and air control systems. Detecting abnormal process behavior manually is difficult because of the amount and complexity of the available time-series data.</p></div>
-    </section>
-
-    <section class="section text-grid">
-      <div><div class="eyebrow">02 · CHALLENGE</div><h2>Challenge</h2></div>
-      <div class="project-prose"><p>Only a limited number of clearly labelled anomalies are available. Therefore, the research focused on machine learning approaches that can learn normal process behaviour and detect previously unknown deviations.</p></div>
-    </section>
-
-    <section class="section approach-section">
-      <div class="section-head compact">
-        <div><div class="eyebrow">03 · RESEARCH APPROACH</div><h2>Research Approach</h2></div>
-        <p class="side-note">A structured evaluation process was used to review <strong>12</strong> potential approaches, select <strong>6</strong> models for detailed comparison and prioritize <strong>3</strong> models for subsequent practical testing.</p>
-      </div>
-      <div class="process-flow">
-        <div><span>01</span><strong>Literature Research</strong></div>
-        <div><span>02</span><strong>Model Longlist</strong></div>
-        <div><span>03</span><strong>Model Selection</strong></div>
-        <div><span>04</span><strong>Evaluation Criteria</strong></div>
-        <div><span>05</span><strong>Model Comparison</strong></div>
-        <div><span>06</span><strong>Prioritized Models</strong></div>
-      </div>
-
-      <div class="two-col-lists">
-        <div>
-          <h3>Models selected for comparison</h3>
-          <ol class="number-list">
-            <li>Moving Average</li><li>PCA</li><li>One-Class SVM</li><li>Isolation Forest</li><li>Local Outlier Factor</li><li>Autoencoder</li>
-          </ol>
-        </div>
-        <div>
-          <h3>Evaluation criteria</h3>
-          <ol class="number-list">
-            <li>Performance</li><li>Accuracy & false alarms</li><li>Rare & unknown anomalies</li><li>Unlabeled data</li><li>Robustness</li><li>Stability</li><li>Interpretability</li><li>Multivariate data</li><li>Parameterization effort</li><li>Scalability / extensibility</li>
-          </ol>
+    <section class="project-intro section-white">
+      <div class="shell">
+        <a class="back-link mono" href="index.html#projects">← BACK TO PROJECTS</a>
+        <div class="project-eyebrow mono">PROJECT 01 · RESEARCH PROJECT · INDUSTRY 4.0 · MACHINE LEARNING</div>
+        <h1>Machine Learning Based Anomaly<br class="desktop-only"> Detection in Industrial Pusher Furnaces</h1>
+        <p class="project-lead">Research on suitable machine learning methods for detecting anomalies in multivariate industrial time-series data from an industrial pusher furnace.</p>
+        <div class="meta-row">
+          <div><span class="mono">PROJECT ID</span><strong>01</strong></div>
+          <div><span class="mono">DATE</span><strong>2026</strong></div>
+          <div><span class="mono">TYPE</span><strong>Research Project</strong></div>
+          <div><span class="mono">STATUS</span><strong>Completed</strong></div>
         </div>
       </div>
     </section>
 
-    <section class="section figure-block">
-      <img class="project-image" src="assets/project-01-model-categories-placeholder.svg" alt="Machine learning model categories placeholder" />
-      <div class="figure-caption"><span>FIG. 2</span><p>Categories of anomaly detection approaches considered during literature research.</p></div>
-    </section>
+    <section class="project-body section-white">
+      <div class="shell project-shell">
+        <figure class="project-figure">
+          <div class="placeholder-frame wide-frame"><img src="assets/project-01-process-placeholder.svg" alt="Industrial pusher furnace process overview placeholder"></div>
+          <figcaption class="figure-caption">Fig. 1 — Process overview: temperature, gas and air control systems across furnace zones.</figcaption>
+        </figure>
 
-    <section class="section comparison-section">
-      <div class="section-head compact">
-        <div><div class="eyebrow">04 · MODEL COMPARISON</div><h2>Model Comparison</h2></div>
-        <p class="side-note">The six selected models were assessed against industrial requirements. The matrix summarizes the qualitative fit of each model.</p>
+        <section class="context-grid lined-section">
+          <div><div class="project-mini mono">CONTEXT</div><p>Industrial pusher furnaces generate large amounts of process data from temperature, gas and air control systems. Detecting abnormal process behavior manually is difficult because of the amount and complexity of the available time-series data.</p></div>
+          <div><div class="project-mini mono">CHALLENGE</div><p>Only a limited number of clearly labelled anomalies are available. Therefore, the research focused on machine learning approaches that can learn normal process behaviour and detect previously unknown deviations.</p></div>
+        </section>
+
+        <section class="approach-block lined-section">
+          <h2>Research Approach</h2>
+          <p class="section-intro">A structured evaluation process was used to review 12 potential approaches, select six models for detailed comparison and prioritize three models for subsequent practical testing.</p>
+          <div class="process-row">
+            <div><span class="step-box mono">01</span><strong>Literature Research</strong></div>
+            <div><span class="step-box mono">02</span><strong>Model Longlist</strong></div>
+            <div><span class="step-box mono">03</span><strong>Model Selection</strong></div>
+            <div><span class="step-box mono">04</span><strong>Evaluation Criteria</strong></div>
+            <div><span class="step-box mono">05</span><strong>Model Comparison</strong></div>
+            <div><span class="step-box mono">06</span><strong>Prioritized Models</strong></div>
+          </div>
+
+          <div class="lists-grid">
+            <div>
+              <h3 class="mono">MODELS SELECTED FOR COMPARISON</h3>
+              <ol class="indexed-list">
+                <li><span>01</span>Moving Average</li>
+                <li><span>02</span>PCA</li>
+                <li><span>03</span>One-Class SVM</li>
+                <li><span>04</span>Isolation Forest</li>
+                <li><span>05</span>Local Outlier Factor</li>
+                <li><span>06</span>Autoencoder</li>
+              </ol>
+            </div>
+            <div>
+              <h3 class="mono">EVALUATION CRITERIA</h3>
+              <ol class="indexed-list">
+                <li><span>01</span>Handling of unlabeled data</li>
+                <li><span>02</span>Detection of rare and unknown anomalies</li>
+                <li><span>03</span>Robustness</li>
+                <li><span>04</span>Interpretability</li>
+                <li><span>05</span>Processing of multivariate time-series data</li>
+                <li><span>06</span>Computational effort</li>
+                <li><span>07</span>Parameterization effort</li>
+                <li><span>08</span>Scalability</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <figure class="project-figure lined-section no-top-pad">
+          <div class="placeholder-frame wide-frame"><img src="assets/project-01-model-categories-placeholder.svg" alt="Machine learning model categories placeholder"></div>
+          <figcaption class="figure-caption">Fig. 2 — Categories of anomaly detection approaches considered during literature research.</figcaption>
+        </figure>
+
+        <section class="comparison-block lined-section">
+          <h2>Model Comparison</h2>
+          <p class="section-intro">The six selected models were assessed against industrial requirements. The matrix below maps each criterion against the candidate models.</p>
+          <div class="table-wrap">
+            <table class="matrix">
+              <thead><tr><th>CRITERION</th><th>MA</th><th>PCA</th><th>OCSVM</th><th>IF</th><th>LOF</th><th>AE</th></tr></thead>
+              <tbody>
+                <tr><td>Performance</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
+                <tr><td>Accuracy &amp; false alarms</td><td>0</td><td>0</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
+                <tr><td>Rare &amp; unknown anomalies</td><td>0</td><td>0</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td></tr>
+                <tr><td>Unlabeled data</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td></tr>
+                <tr><td>Robustness</td><td>0</td><td>0</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
+                <tr><td>Stability</td><td>0</td><td>0</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
+                <tr><td>Interpretability</td><td class="plus">+</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="minus">−</td></tr>
+                <tr><td>Multivariate data</td><td class="minus">−</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
+                <tr><td>Parameterization effort</td><td class="plus">+</td><td>0</td><td class="minus">−</td><td>0</td><td>0</td><td class="minus">−</td></tr>
+                <tr><td>Scalability / extensibility</td><td>0</td><td class="plus">+</td><td>0</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="matrix-legend mono"><span>+ strong fit</span><span>·</span><span>0 moderate fit</span><span>·</span><span>− limited fit</span></div>
+        </section>
+
+        <figure class="project-figure lined-section no-top-pad">
+          <div class="placeholder-frame wide-frame"><img src="assets/project-01-workflow-placeholder.svg" alt="Model comparison workflow placeholder"></div>
+          <figcaption class="figure-caption">Fig. 3 — Workflow from literature research to prioritized models.</figcaption>
+        </figure>
+
+        <section class="results-block lined-section">
+          <h2>Results</h2>
+          <div class="results-grid">
+            <article><div class="model-no mono">Model 01</div><h3>Isolation Forest</h3><div class="result-k mono">ROLE</div><p>Preferred model for a first practical implementation.</p><div class="result-k mono">STRENGTHS</div><p>Efficient, suitable for unlabeled data and transferable to different furnace zones and process phases.</p></article>
+            <article><div class="model-no mono">Model 02</div><h3>One-Class SVM</h3><div class="result-k mono">ROLE</div><p>Complementary comparison model.</p><div class="result-k mono">STRENGTHS</div><p>Learns a representation of normal process behaviour and can identify previously unknown deviations.</p></article>
+            <article><div class="model-no mono">Model 03</div><h3>Autoencoder</h3><div class="result-k mono">ROLE</div><p>Advanced approach for more complex process patterns.</p><div class="result-k mono">STRENGTHS</div><p>Can model nonlinear relationships between multiple process variables.</p></article>
+          </div>
+          <p class="foundation-note">This research represents the theoretical and methodological foundation for subsequent practical model tests on real industrial process data.</p>
+        </section>
+
+        <figure class="project-figure lined-section no-top-pad">
+          <div class="placeholder-frame wide-frame"><img src="assets/project-01-prioritized-placeholder.svg" alt="Final prioritized models placeholder"></div>
+          <figcaption class="figure-caption">Fig. 4 — Prioritized models for practical implementation.</figcaption>
+        </figure>
+
+        <section class="tech-block lined-section">
+          <h2>Technologies and Methods</h2>
+          <div class="tech-tags"><span>Machine Learning</span><span>Python</span><span>Anomaly Detection</span><span>Time Series</span><span>Industrial Data</span><span>Industry 4.0</span><span>Research</span></div>
+        </section>
       </div>
-      <div class="legend"><span><b>+</b> strong fit</span><span><b>0</b> moderate fit</span><span><b>−</b> limited fit</span></div>
-      <div class="table-wrap">
-        <table class="matrix">
-          <thead><tr><th>Evaluation criterion</th><th>MA</th><th>PCA</th><th>OCSVM</th><th>IF</th><th>LOF</th><th>AE</th></tr></thead>
-          <tbody>
-            <tr><td>Performance</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
-            <tr><td>Accuracy & false alarms</td><td>0</td><td>0</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
-            <tr><td>Rare & unknown anomalies</td><td>0</td><td>0</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td></tr>
-            <tr><td>Unlabeled data</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td></tr>
-            <tr><td>Robustness</td><td>0</td><td>0</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
-            <tr><td>Stability</td><td>0</td><td>0</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
-            <tr><td>Interpretability</td><td class="plus">+</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="minus">−</td></tr>
-            <tr><td>Multivariate data</td><td class="minus">−</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
-            <tr><td>Parameterization effort</td><td class="plus">+</td><td>0</td><td class="minus">−</td><td>0</td><td>0</td><td class="minus">−</td></tr>
-            <tr><td>Scalability / extensibility</td><td>0</td><td class="plus">+</td><td>0</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="section figure-block">
-      <img class="project-image" src="assets/project-01-workflow-placeholder.svg" alt="Model comparison workflow placeholder" />
-      <div class="figure-caption"><span>FIG. 3</span><p>Workflow from literature research to prioritized models.</p></div>
-    </section>
-
-    <section class="section results-section">
-      <div class="eyebrow">05 · RESULTS</div>
-      <h2>Results</h2>
-      <div class="key-finding">
-        <span>KEY FINDING</span>
-        <p>There is no universally best anomaly detection model. Model suitability depends on the process, available data and intended industrial use case.</p>
-      </div>
-      <div class="result-grid">
-        <article class="result-card featured"><div class="result-label">PRACTICAL STARTING POINT</div><h3>Isolation Forest</h3><dl><dt>Role</dt><dd>Preferred model for a first practical implementation.</dd><dt>Strengths</dt><dd>Efficient, suitable for unlabeled data and transferable to different furnace zones and process phases.</dd></dl></article>
-        <article class="result-card"><div class="result-label">COMPARISON APPROACH</div><h3>One-Class SVM</h3><dl><dt>Role</dt><dd>Complementary comparison model.</dd><dt>Strengths</dt><dd>Learns a representation of normal process behaviour and can identify previously unknown deviations.</dd></dl></article>
-        <article class="result-card"><div class="result-label">ADVANCED APPROACH</div><h3>Autoencoder</h3><dl><dt>Role</dt><dd>Advanced approach for more complex process patterns.</dd><dt>Strengths</dt><dd>Can model nonlinear relationships between multiple process variables.</dd></dl></article>
-      </div>
-      <p class="foundation-note">This research represents the theoretical and methodological foundation for subsequent practical model tests on real industrial process data.</p>
-    </section>
-
-    <section class="section figure-block">
-      <img class="project-image" src="assets/project-01-prioritized-placeholder.svg" alt="Final prioritized models placeholder" />
-      <div class="figure-caption"><span>FIG. 4</span><p>Prioritized models for practical implementation.</p></div>
-    </section>
-
-    <section class="section tech-section">
-      <div class="eyebrow">06 · TECHNOLOGIES & METHODS</div>
-      <h2>Technologies and Methods</h2>
-      <div class="tech-tags"><span>Machine Learning</span><span>Python</span><span>Anomaly Detection</span><span>Time Series</span><span>Industrial Data</span><span>Industry 4.0</span><span>Research</span></div>
-    </section>
-
-    <section class="section project-next">
-      <a class="btn btn-ghost" href="index.html#projects">← Back to projects</a>
     </section>
   </main>
 
-  <footer class="footer"><span>Laila Gruber · Portfolio</span><span>© <span id="year"></span></span></footer>
+  <footer class="footer">
+    <div class="shell footer-inner mono"><span>Laila Gruber · Portfolio</span><span>© <span id="year">2026</span></span></div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
