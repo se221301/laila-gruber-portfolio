@@ -25,3 +25,7 @@ git add .
 git commit -m "Update portfolio images"
 git push
 ```
+
+
+## About timeline
+The About section contains a responsive career timeline based on the supplied CV. Edit the entries directly in `index.html` under `.career-timeline`.
