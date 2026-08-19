@@ -521,6 +521,18 @@ const pageMeta = {
   }
 };
 
+
+function updateLocalizedImages(lang) {
+  const selected = lang === 'de' ? 'de' : 'en';
+  document.querySelectorAll('[data-image-en][data-image-de]').forEach(img => {
+    const nextSrc = selected === 'de' ? img.dataset.imageDe : img.dataset.imageEn;
+    if (nextSrc) img.setAttribute('src', nextSrc);
+
+    const nextAlt = selected === 'de' ? img.dataset.altDe : img.dataset.altEn;
+    if (nextAlt) img.setAttribute('alt', nextAlt);
+  });
+}
+
 function applyLanguage(lang) {
   const selected = lang === 'en' ? 'en' : 'de';
   document.documentElement.lang = selected;
@@ -544,6 +556,8 @@ function applyLanguage(lang) {
     const description = document.querySelector('meta[name="description"]');
     if (description) description.setAttribute('content', meta.description);
   }
+
+  updateLocalizedImages(selected);
 
 }
 
