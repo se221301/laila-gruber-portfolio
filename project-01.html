@@ -1,156 +1,144 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+
+<html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <meta name="description" content="Machine Learning Based Anomaly Detection in Industrial Pusher Furnaces — Laila Gruber." />
-  <title>Project 01 · Laila Gruber</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+<meta content="no-cache" http-equiv="Pragma"/>
+<meta content="0" http-equiv="Expires"/>
+<meta content="Machine-Learning-basierte Anomalieerkennung in industriellen Stoßöfen · Forschungsprojekt von Laila Gruber." name="description"/>
+<title>Projekt 01 · Laila Gruber</title>
+<link href="styles.css" rel="stylesheet"/>
 </head>
-<body>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="index.html">LAILA GRUBER</a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="project-page">
-    <section class="project-intro section-white">
-      <div class="shell">
-        <a class="back-link mono" href="index.html#projects">← BACK TO PROJECTS</a>
-        <div class="project-eyebrow mono">PROJECT 01 · RESEARCH PROJECT · INDUSTRY 4.0 · MACHINE LEARNING</div>
-        <h1>Machine Learning Based Anomaly<br class="desktop-only"> Detection in Industrial Pusher Furnaces</h1>
-        <p class="project-lead">Research on suitable machine learning methods for detecting anomalies in multivariate industrial time-series data from an industrial pusher furnace.</p>
-        <div class="meta-row">
-          <div><span class="mono">PROJECT ID</span><strong>01</strong></div>
-          <div><span class="mono">DATE</span><strong>2026</strong></div>
-          <div><span class="mono">TYPE</span><strong>Research Project</strong></div>
-          <div><span class="mono">STATUS</span><strong>Completed</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-body section-white">
-      <div class="shell project-shell">
-        <figure class="project-figure">
-          <div class="project-image"><img src="assets/figure-01-pusher-furnace-process.png" alt="Schematic representation of the pusher furnace process"></div>
-          <figcaption class="figure-caption">Fig. 1 — Schematic representation of the considered pusher furnace process with material flow, heating zones and process phases.</figcaption>
-        </figure>
-
-        <section class="context-grid lined-section">
-          <div><div class="project-mini mono">CONTEXT</div><p>Industrial pusher furnaces generate large amounts of process data from temperature, gas and air control systems. Detecting abnormal process behavior manually is difficult because of the amount and complexity of the available time-series data.</p></div>
-          <div><div class="project-mini mono">CHALLENGE</div><p>Only a limited number of clearly labelled anomalies are available. Therefore, the research focused on machine learning approaches that can learn normal process behaviour and detect previously unknown deviations.</p></div>
-        </section>
-
-        <section class="approach-block lined-section">
-          <h2>Research Approach</h2>
-          <p class="section-intro">A structured evaluation process was used to review 12 potential approaches, select six models for detailed comparison and prioritize three models for subsequent practical testing.</p>
-          <div class="process-row">
-            <div><span class="step-box mono">01</span><strong>Literature Research</strong></div>
-            <div><span class="step-box mono">02</span><strong>Model Longlist</strong></div>
-            <div><span class="step-box mono">03</span><strong>Model Selection</strong></div>
-            <div><span class="step-box mono">04</span><strong>Evaluation Criteria</strong></div>
-            <div><span class="step-box mono">05</span><strong>Model Comparison</strong></div>
-            <div><span class="step-box mono">06</span><strong>Prioritized Models</strong></div>
-          </div>
-
-          <div class="lists-grid">
-            <div>
-              <h3 class="mono">MODELS SELECTED FOR COMPARISON</h3>
-              <ol class="indexed-list">
-                <li><span>01</span>Moving Average</li>
-                <li><span>02</span>PCA</li>
-                <li><span>03</span>One-Class SVM</li>
-                <li><span>04</span>Isolation Forest</li>
-                <li><span>05</span>Local Outlier Factor</li>
-                <li><span>06</span>Autoencoder</li>
-              </ol>
-            </div>
-            <div>
-              <h3 class="mono">EVALUATION CRITERIA</h3>
-              <ol class="indexed-list">
-                <li><span>01</span>Handling of unlabeled data</li>
-                <li><span>02</span>Detection of rare and unknown anomalies</li>
-                <li><span>03</span>Robustness</li>
-                <li><span>04</span>Interpretability</li>
-                <li><span>05</span>Processing of multivariate time-series data</li>
-                <li><span>06</span>Computational effort</li>
-                <li><span>07</span>Parameterization effort</li>
-                <li><span>08</span>Scalability</li>
-              </ol>
-            </div>
-          </div>
-        </section>
-
-        <figure class="project-figure lined-section no-top-pad">
-          <div class="project-image"><img src="assets/figure-02-model-groups.png" alt="Model groups considered for anomaly detection in time-series data"></div>
-          <figcaption class="figure-caption">Fig. 2 — Model groups considered for anomaly detection in time-series data.</figcaption>
-        </figure>
-
-        <section class="comparison-block lined-section">
-          <h2>Model Comparison</h2>
-          <p class="section-intro">The six selected models were assessed against industrial requirements. The matrix below maps each criterion against the candidate models.</p>
-          <div class="table-wrap">
-            <table class="matrix">
-              <thead><tr><th>CRITERION</th><th>MA</th><th>PCA</th><th>OCSVM</th><th>IF</th><th>LOF</th><th>AE</th></tr></thead>
-              <tbody>
-                <tr><td>Performance</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
-                <tr><td>Accuracy &amp; false alarms</td><td>0</td><td>0</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
-                <tr><td>Rare &amp; unknown anomalies</td><td>0</td><td>0</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td></tr>
-                <tr><td>Unlabeled data</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td></tr>
-                <tr><td>Robustness</td><td>0</td><td>0</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
-                <tr><td>Stability</td><td>0</td><td>0</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
-                <tr><td>Interpretability</td><td class="plus">+</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="minus">−</td></tr>
-                <tr><td>Multivariate data</td><td class="minus">−</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
-                <tr><td>Parameterization effort</td><td class="plus">+</td><td>0</td><td class="minus">−</td><td>0</td><td>0</td><td class="minus">−</td></tr>
-                <tr><td>Scalability / extensibility</td><td>0</td><td class="plus">+</td><td>0</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="matrix-legend mono"><span>+ strong fit</span><span>·</span><span>0 moderate fit</span><span>·</span><span>− limited fit</span></div>
-        </section>
-
-        <figure class="project-figure lined-section no-top-pad">
-          <div class="project-image"><img src="assets/figure-03-model-comparison-workflow.png" alt="Model comparison workflow from literature review to prioritized models"></div>
-          <figcaption class="figure-caption">Fig. 3 — Model comparison workflow from literature review to prioritized models.</figcaption>
-        </figure>
-
-        <section class="results-block lined-section">
-          <h2>Results</h2>
-          <div class="results-grid">
-            <article><div class="model-no mono">Model 01</div><h3>Isolation Forest</h3><div class="result-k mono">ROLE</div><p>Preferred model for a first practical implementation.</p><div class="result-k mono">STRENGTHS</div><p>Efficient, suitable for unlabeled data and transferable to different furnace zones and process phases.</p></article>
-            <article><div class="model-no mono">Model 02</div><h3>One-Class SVM</h3><div class="result-k mono">ROLE</div><p>Complementary comparison model.</p><div class="result-k mono">STRENGTHS</div><p>Learns a representation of normal process behaviour and can identify previously unknown deviations.</p></article>
-            <article><div class="model-no mono">Model 03</div><h3>Autoencoder</h3><div class="result-k mono">ROLE</div><p>Advanced approach for more complex process patterns.</p><div class="result-k mono">STRENGTHS</div><p>Can model nonlinear relationships between multiple process variables.</p></article>
-          </div>
-          <p class="foundation-note">This research represents the theoretical and methodological foundation for subsequent practical model tests on real industrial process data.</p>
-        </section>
-
-        <figure class="project-figure lined-section no-top-pad">
-          <div class="project-image"><img src="assets/figure-04-prioritized-models.png" alt="Three prioritized models for the pusher furnace process"></div>
-          <figcaption class="figure-caption">Fig. 4 — Summary of the three prioritized models for the pusher furnace process.</figcaption>
-        </figure>
-
-        <section class="tech-block lined-section">
-          <h2>Technologies and Methods</h2>
-          <div class="tech-tags"><span>Machine Learning</span><span>Python</span><span>Anomaly Detection</span><span>Time Series</span><span>Industrial Data</span><span>Industry 4.0</span><span>Research</span></div>
-        </section>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="shell footer-inner mono"><span>Laila Gruber · Portfolio</span><span>© <span id="year">2026</span></span></div>
-  </footer>
-
-  <script src="script.js"></script>
+<body data-page="project">
+<header class="site-header">
+<div class="shell header-inner">
+<a class="brand" href="index.html">LAILA GRUBER</a>
+<div class="header-tools"><nav aria-label="Primary navigation" class="nav">
+<a data-i18n="nav.home" href="index.html">Start</a>
+<a data-i18n="nav.about" href="index.html#about">Über mich</a>
+<a data-i18n="nav.projects" href="index.html#projects">Projekte</a>
+<a data-i18n="nav.contact" href="index.html#contact">Kontakt</a>
+</nav><div aria-label="Language selection" class="language-switch" role="group"><button aria-pressed="true" class="lang-btn active" data-lang="de" type="button">DE</button><span aria-hidden="true" class="lang-separator">/</span><button aria-pressed="false" class="lang-btn" data-lang="en" type="button">EN</button></div></div>
+</div>
+</header>
+<main class="project-page">
+<section class="project-intro section-white">
+<div class="shell">
+<a class="back-link mono" data-i18n="project.back" href="index.html#projects">← ZURÜCK ZU DEN PROJEKTEN</a>
+<div class="project-eyebrow mono" data-i18n="project.eyebrow">PROJEKT 01 · FORSCHUNGSPROJEKT · INDUSTRIE 4.0 · MACHINE LEARNING</div>
+<h1 data-i18n="project.title">Machine-Learning-basierte Anomalieerkennung in industriellen Stoßöfen</h1>
+<p class="project-lead" data-i18n="project.lead">Untersuchung geeigneter Machine-Learning-Verfahren zur Erkennung von Anomalien in multivariaten Zeitreihendaten eines industriellen Stoßofens.</p>
+<div class="meta-row">
+<div><span class="mono" data-i18n="project.meta.id">PROJEKT ID</span><strong data-i18n="project.meta.id.value">01</strong></div>
+<div><span class="mono" data-i18n="project.meta.date">JAHR</span><strong data-i18n="project.meta.date.value">2026</strong></div>
+<div><span class="mono" data-i18n="project.meta.type">TYP</span><strong data-i18n="project.meta.type.value">Forschungsprojekt</strong></div>
+<div><span class="mono" data-i18n="project.meta.status">STATUS</span><strong data-i18n="project.meta.status.value">Abgeschlossen</strong></div>
+</div>
+</div>
+</section>
+<section class="project-body section-white">
+<div class="shell project-shell">
+<figure class="project-figure">
+<div class="project-image"><img alt="Schematic representation of the pusher furnace process" src="assets/figure-01-pusher-furnace-process.png"/></div>
+<figcaption class="figure-caption" data-i18n="project.fig1">Abb. 1 · Schematische Darstellung des betrachteten Stoßofenprozesses mit Materialfluss, Heizzonen und Prozessphasen.</figcaption>
+</figure>
+<section class="context-grid lined-section">
+<div><div class="project-mini mono" data-i18n="project.context.label">KONTEXT</div><p data-i18n="project.context.text">Industrielle Stoßöfen erzeugen große Mengen an Prozessdaten aus Temperatur-, Gas- und Luftregelung. Auffälliges Prozessverhalten darin manuell zu erkennen, ist aufgrund der Datenmenge und der komplexen Zeitreihen nur schwer praktikabel.</p></div>
+<div><div class="project-mini mono" data-i18n="project.challenge.label">HERAUSFORDERUNG</div><p data-i18n="project.challenge.text">Eindeutig gelabelte Anomalien stehen nur in begrenztem Umfang zur Verfügung. Im Mittelpunkt standen deshalb Verfahren, die das Normalverhalten aus den vorhandenen Daten lernen und auch bislang unbekannte Abweichungen erkennen können.</p></div>
+</section>
+<section class="approach-block lined-section">
+<h2 data-i18n="project.approach.title">Vorgehensweise</h2>
+<p class="section-intro" data-i18n="project.approach.intro">In einem strukturierten Auswahlprozess wurden zunächst 12 mögliche Ansätze betrachtet. Sechs Modelle wurden anschließend detailliert verglichen, daraus wurden drei Verfahren für die praktische Erprobung priorisiert.</p>
+<div class="process-row">
+<div><span class="step-box mono">01</span><strong data-i18n="project.approach.step1">Literaturrecherche</strong></div>
+<div><span class="step-box mono">02</span><strong data-i18n="project.approach.step2">Modell-Longlist</strong></div>
+<div><span class="step-box mono">03</span><strong data-i18n="project.approach.step3">Modellauswahl</strong></div>
+<div><span class="step-box mono">04</span><strong data-i18n="project.approach.step4">Bewertungskriterien</strong></div>
+<div><span class="step-box mono">05</span><strong data-i18n="project.approach.step5">Modellvergleich</strong></div>
+<div><span class="step-box mono">06</span><strong data-i18n="project.approach.step6">Priorisierte Modelle</strong></div>
+</div>
+<div class="lists-grid">
+<div>
+<h3 class="mono" data-i18n="project.models.heading">MODELLE IM VERGLEICH</h3>
+<ol class="indexed-list">
+<li><span>01</span>Moving Average</li>
+<li><span>02</span>PCA</li>
+<li><span>03</span>One-Class SVM</li>
+<li><span>04</span>Isolation Forest</li>
+<li><span>05</span>Local Outlier Factor</li>
+<li><span>06</span>Autoencoder</li>
+</ol>
+</div>
+<div>
+<h3 class="mono" data-i18n="project.criteria.heading">BEWERTUNGSKRITERIEN</h3>
+<ol class="indexed-list">
+<li><span>01</span><div data-i18n="project.criteria.1">Umgang mit ungelabelten Daten</div></li>
+<li><span>02</span><div data-i18n="project.criteria.2">Erkennung seltener und unbekannter Anomalien</div></li>
+<li><span>03</span><div data-i18n="project.criteria.3">Robustheit</div></li>
+<li><span>04</span><div data-i18n="project.criteria.4">Interpretierbarkeit</div></li>
+<li><span>05</span><div data-i18n="project.criteria.5">Verarbeitung multivariater Zeitreihendaten</div></li>
+<li><span>06</span><div data-i18n="project.criteria.6">Rechenaufwand</div></li>
+<li><span>07</span><div data-i18n="project.criteria.7">Parametrierungsaufwand</div></li>
+<li><span>08</span><div data-i18n="project.criteria.8">Skalierbarkeit</div></li>
+</ol>
+</div>
+</div>
+</section>
+<figure class="project-figure lined-section no-top-pad">
+<div class="project-image"><img alt="Model groups considered for anomaly detection in time-series data" src="assets/figure-02-model-groups.png"/></div>
+<figcaption class="figure-caption" data-i18n="project.fig2">Abb. 2 · Modellgruppen, die für die Anomalieerkennung in Zeitreihendaten betrachtet wurden.</figcaption>
+</figure>
+<section class="comparison-block lined-section">
+<h2 data-i18n="project.comparison.title">Modellvergleich</h2>
+<p class="section-intro" data-i18n="project.comparison.intro">Die sechs ausgewählten Modelle wurden anhand der für den industriellen Einsatz relevanten Anforderungen bewertet. Die Matrix zeigt die Einschätzung der einzelnen Verfahren je Kriterium.</p>
+<div class="table-wrap">
+<table class="matrix">
+<thead><tr><th data-i18n="project.matrix.criterion">KRITERIUM</th><th>MA</th><th>PCA</th><th>OCSVM</th><th>IF</th><th>LOF</th><th>AE</th></tr></thead>
+<tbody>
+<tr><td data-i18n="project.matrix.row1">Leistungsfähigkeit</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
+<tr><td data-i18n="project.matrix.row2">Genauigkeit &amp; Fehlalarme</td><td>0</td><td>0</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
+<tr><td data-i18n="project.matrix.row3">Seltene &amp; unbekannte Anomalien</td><td>0</td><td>0</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td></tr>
+<tr><td data-i18n="project.matrix.row4">Ungelabelte Daten</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td></tr>
+<tr><td data-i18n="project.matrix.row5">Robustheit</td><td>0</td><td>0</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
+<tr><td data-i18n="project.matrix.row6">Stabilität</td><td>0</td><td>0</td><td>0</td><td class="plus">+</td><td>0</td><td>0</td></tr>
+<tr><td data-i18n="project.matrix.row7">Interpretierbarkeit</td><td class="plus">+</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="minus">−</td></tr>
+<tr><td data-i18n="project.matrix.row8">Multivariate Daten</td><td class="minus">−</td><td class="plus">+</td><td class="plus">+</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
+<tr><td data-i18n="project.matrix.row9">Parametrierungsaufwand</td><td class="plus">+</td><td>0</td><td class="minus">−</td><td>0</td><td>0</td><td class="minus">−</td></tr>
+<tr><td data-i18n="project.matrix.row10">Skalierbarkeit / Erweiterbarkeit</td><td>0</td><td class="plus">+</td><td>0</td><td class="plus">+</td><td>0</td><td class="plus">+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="matrix-legend mono"><span data-i18n="project.legend.plus">+ gute Eignung</span><span>·</span><span data-i18n="project.legend.zero">0 mittlere Eignung</span><span>·</span><span data-i18n="project.legend.minus">− eingeschränkte Eignung</span></div>
+</section>
+<figure class="project-figure lined-section no-top-pad">
+<div class="project-image"><img alt="Model comparison workflow from literature review to prioritized models" src="assets/figure-03-model-comparison-workflow.png"/></div>
+<figcaption class="figure-caption" data-i18n="project.fig3">Abb. 3 · Ablauf des Modellvergleichs von der Literaturrecherche bis zu den priorisierten Modellen.</figcaption>
+</figure>
+<section class="results-block lined-section">
+<h2 data-i18n="project.results.title">Ergebnisse</h2>
+<div class="results-grid">
+<article><div class="model-no mono" data-i18n="project.results.1.model">Modell 01</div><h3>Isolation Forest</h3><div class="result-k mono" data-i18n="project.results.1.roleLabel">ROLLE</div><p data-i18n="project.results.1.role">Bevorzugter Ansatz für eine erste praktische Umsetzung.</p><div class="result-k mono" data-i18n="project.results.1.strengthLabel">STÄRKEN</div><p data-i18n="project.results.1.strength">Effizient, für ungelabelte Daten gut geeignet und auf weitere Ofenzonen und Prozessphasen übertragbar.</p></article>
+<article><div class="model-no mono" data-i18n="project.results.2.model">Modell 02</div><h3>One-Class SVM</h3><div class="result-k mono" data-i18n="project.results.2.roleLabel">ROLLE</div><p data-i18n="project.results.2.role">Ergänzendes Vergleichsmodell.</p><div class="result-k mono" data-i18n="project.results.2.strengthLabel">STÄRKEN</div><p data-i18n="project.results.2.strength">Lernt den Bereich des Normalverhaltens und kann dadurch auch bislang unbekannte Abweichungen erkennen.</p></article>
+<article><div class="model-no mono" data-i18n="project.results.3.model">Modell 03</div><h3>Autoencoder</h3><div class="result-k mono" data-i18n="project.results.3.roleLabel">ROLLE</div><p data-i18n="project.results.3.role">Weiterführender Ansatz für komplexere Prozessmuster.</p><div class="result-k mono" data-i18n="project.results.3.strengthLabel">STÄRKEN</div><p data-i18n="project.results.3.strength">Kann nichtlineare Zusammenhänge zwischen mehreren Prozessgrößen abbilden.</p></article>
+</div>
+<p class="foundation-note" data-i18n="project.foundation">Diese Forschungsarbeit bildet die theoretische und methodische Grundlage für die anschließenden praktischen Modelltests mit realen industriellen Prozessdaten.</p>
+</section>
+<figure class="project-figure lined-section no-top-pad">
+<div class="project-image"><img alt="Three prioritized models for the pusher furnace process" src="assets/figure-04-prioritized-models.png"/></div>
+<figcaption class="figure-caption" data-i18n="project.fig4">Abb. 4 · Zusammenfassung der drei priorisierten Modelle für den Stoßofenprozess.</figcaption>
+</figure>
+<section class="tech-block lined-section">
+<h2 data-i18n="project.tech.title">Technologien und Methoden</h2>
+<div class="tech-tags"><span data-i18n="project.tech.1">Machine Learning</span><span data-i18n="project.tech.2">Python</span><span data-i18n="project.tech.3">Anomalieerkennung</span><span data-i18n="project.tech.4">Zeitreihen</span><span data-i18n="project.tech.5">Industrielle Prozessdaten</span><span data-i18n="project.tech.6">Industrie 4.0</span><span data-i18n="project.tech.7">Forschung</span></div>
+</section>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="shell footer-inner mono"><span>Laila Gruber · Portfolio</span><span>© <span id="year">2026</span></span></div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

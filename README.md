@@ -29,3 +29,7 @@ git push
 
 ## About timeline
 The About section contains a responsive career timeline based on the supplied CV. Edit the entries directly in `index.html` under `.career-timeline`.
+
+
+## Language switch
+The portfolio is bilingual (German / English). German is the default language. The selected language is stored in the browser via localStorage and therefore remains active when switching between the home page and project pages.
