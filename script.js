@@ -261,7 +261,7 @@ const translations = {
     "en": "CONTEXT"
   },
   "project.context.text": {
-    "de": "Industrielle Stoßöfen erzeugen große Mengen an Prozessdaten aus Temperatur-, Gas- und Luftregelung. Auffälliges Prozessverhalten darin manuell zu erkennen, ist aufgrund der Datenmenge und der komplexen Zeitreihen nur schwer praktikabel.",
+    "de": "Industrielle Stoßöfen erzeugen große Mengen an Prozessdaten aus Temperatur-, Gas- und Luftregelung. Auffälliges Prozessverhalten darin manuell zu erkennen, ist aufgrund der Datenmenge und der komplexen Zeitreihen nur schwer umsetzbar.",
     "en": "Industrial pusher furnaces generate large amounts of process data from temperature, gas and air control systems. Detecting abnormal process behavior manually is difficult because of the amount and complexity of the available time-series data."
   },
   "project.challenge.label": {
