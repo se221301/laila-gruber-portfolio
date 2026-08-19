@@ -17,11 +17,11 @@ const translations = {
     "en": "Contact"
   },
   "home.hero.kicker": {
-    "de": "Industrieautomation · Machine Learning · Industrie 4.0",
+    "de": "Automatisierung · Machine Learning · Industrie 4.0",
     "en": "Industrial Automation · Machine Learning · Industry 4.0"
   },
   "home.hero.text": {
-    "de": "Ich studiere derzeit Interactive Technologies mit Schwerpunkt Industrie 4.0 an der FH St. Pölten. Besonders interessieren mich industrielle Automatisierung, Machine Learning, die Analyse von Prozessdaten und die Entwicklung datenbasierter Lösungen für reale Anwendungen in der Industrie.",
+    "de": "Ich studiere derzeit Interactive Technologies mit Schwerpunkt Industrie 4.0 an der FH St. Pölten. Besonders interessieren mich Automatisierung, Machine Learning, Prozessanalyse und die Entwicklung digitaler Lösungen für industrielle Anwendungen.",
     "en": "I am currently studying Interactive Technologies with a focus on Industry 4.0 at the University of Applied Sciences St. Pölten. My interests include industrial automation, machine learning, process data analysis and the development of data-driven solutions for industrial applications."
   },
   "home.hero.projects": {
@@ -45,11 +45,11 @@ const translations = {
     "en": "CONTACT"
   },
   "home.about.lead": {
-    "de": "Meine Arbeit bewegt sich an der Schnittstelle von Industrieautomation, Elektrotechnik und Produktion. Dabei verbinde ich Machine Learning und Prozessdatenanalyse mit konkreten Fragestellungen aus der Industrie 4.0.",
+    "de": "Meine Arbeit verbindet Automatisierung, Elektrotechnik und Produktion. Dabei setze ich Machine Learning und Prozessanalyse dort ein, wo sie im industriellen Alltag einen konkreten Mehrwert schaffen können.",
     "en": "My work sits at the intersection of industrial automation, electrical engineering and manufacturing, applying machine learning and process data analysis to build data-driven solutions for Industry 4.0."
   },
   "home.about.text": {
-    "de": "Mich interessiert vor allem, wie sich aus komplexen Prozessdaten tatsächlich nutzbare Erkenntnisse gewinnen lassen: Zeitreihen verstehen, Auffälligkeiten erkennen und Produktionsprozesse mit nachvollziehbaren, praxisnahen Methoden verbessern.",
+    "de": "Besonders spannend finde ich die Frage, wie sich aus komplexen Prozessdaten verständliche und nutzbare Erkenntnisse gewinnen lassen. Dazu gehören für mich das Analysieren von Zeitreihen, das Erkennen von Auffälligkeiten und die praktische Verbesserung von Produktionsprozessen.",
     "en": "I focus on turning complex industrial process data into actionable insight: understanding multivariate time-series, detecting anomalies, and contributing to the optimization of real production systems through practical, methodologically sound approaches."
   },
   "home.interests.title": {
@@ -57,7 +57,7 @@ const translations = {
     "en": "AREAS OF INTEREST"
   },
   "home.interests.1": {
-    "de": "Industrieautomation",
+    "de": "Automatisierung",
     "en": "Industrial Automation"
   },
   "home.interests.2": {
@@ -512,7 +512,7 @@ const translations = {
 
 const pageMeta = {
   home: {
-    de: { title: 'Laila Gruber · Portfolio', description: 'Portfolio von Laila Gruber mit Fokus auf Industrieautomation, Machine Learning und Industrie 4.0.' },
+    de: { title: 'Laila Gruber · Portfolio', description: 'Portfolio von Laila Gruber mit Fokus auf Automatisierung, Machine Learning und Industrie 4.0.' },
     en: { title: 'Laila Gruber · Portfolio', description: 'Laila Gruber portfolio focused on industrial automation, machine learning and Industry 4.0.' }
   },
   project: {
@@ -545,14 +545,43 @@ function applyLanguage(lang) {
     if (description) description.setAttribute('content', meta.description);
   }
 
-  localStorage.setItem('portfolioLanguage', selected);
 }
 
-const savedLanguage = localStorage.getItem('portfolioLanguage');
-applyLanguage(savedLanguage === 'en' ? 'en' : 'de');
 
-document.querySelectorAll('.lang-btn').forEach(button => {
-  button.addEventListener('click', () => applyLanguage(button.dataset.lang));
+const LANGUAGE_STORAGE_KEY = 'portfolioLanguageV2';
+const DEFAULT_LANGUAGE = 'en';
+
+function getSavedLanguage() {
+  try {
+    const saved = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    return saved === 'de' || saved === 'en' ? saved : DEFAULT_LANGUAGE;
+  } catch (error) {
+    return DEFAULT_LANGUAGE;
+  }
+}
+
+function saveLanguage(lang) {
+  try {
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+  } catch (error) {
+    // The language switch still works if storage is unavailable.
+  }
+}
+
+const originalApplyLanguage = applyLanguage;
+applyLanguage = function(lang) {
+  const selected = lang === 'de' ? 'de' : 'en';
+  originalApplyLanguage(selected);
+  saveLanguage(selected);
+};
+
+applyLanguage(getSavedLanguage());
+
+document.addEventListener('click', event => {
+  const button = event.target.closest('.lang-btn[data-lang]');
+  if (!button) return;
+  event.preventDefault();
+  applyLanguage(button.dataset.lang);
 });
 
 // Keep the footer year current.
@@ -577,7 +606,3 @@ if (sections.length) {
   sections.forEach(section => observer.observe(section));
 }
 
-// Refresh a page restored from the browser back/forward cache.
-window.addEventListener('pageshow', event => {
-  if (event.persisted) window.location.reload();
-});
